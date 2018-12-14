@@ -1,0 +1,19 @@
+package com.cognizant.testing.BlackJack;
+
+avax.naming.spi.DirStateFactory.Result;
+
+
+
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+
+public class Runner {
+	public static void main(String[] args) {
+		Runner runner = new Runner();
+		runner.allSuites();
+		
+	}
+	public void allSuites() {
+		Result result = new JUnitCore().runClasses(ValidSuite.class,NonValidAndBust.class);
+	}
+}

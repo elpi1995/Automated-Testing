@@ -1,0 +1,45 @@
+package com.cognizant.elpida.testing.Travels;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class travelsTest {
+	WebDriver driver;
+	String destination = "London";
+	String password = "Pass123";
+	@Before
+	public void setup() throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\Desktop\\chromedriver.exe");
+		driver = new ChromeDriver();
+		
+		System.out.println("Before");
+	}
+	@After
+	public void teardown() throws InterruptedException {
+		System.out.println("After");
+
+		driver.quit();
+	}
+	@Test
+	public void bookTest() throws InterruptedException {
+		driver.manage().window().maximize();
+		driver.get("https://www.phptravels.net/");
+		WebElement hotels = driver.findElement(By.xpath("//*[@id=\"body-section\"]/section/div[2]/div/div/div[2]/ul/li[1]/a"));
+		WebElement guests = driver.findElement(By.xpath("//*[@id=\"travellersInput\"]"));
+		WebElement adultsPlus = driver.findElement(By.xpath("//*[@id=\"adultPlusBtn\"]"));
+		WebElement childrenPlus = driver.findElement(By.xpath("//*[@id=\"childInput\"]"));
+		Actions action = new Actions(driver);
+		action.doubleClick(guests).click(adultsPlus).perform();
+		Thread.sleep(5000);
+		
+		
+	}
+	
+}

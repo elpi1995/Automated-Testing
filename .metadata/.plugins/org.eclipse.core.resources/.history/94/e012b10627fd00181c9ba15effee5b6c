@@ -1,0 +1,26 @@
+package com.cognizant.testing.Selinium101;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class FirstSelinium {
+	@Before
+	public void setup() {
+		System.out.println("Before");
+	}
+	@After
+	public void teardown() {
+		System.out.println("After");
+		
+	}
+	@Test
+	public void seleniumTest() {
+		System.out.println("Test1");
+	}
+	@Test
+	public void testery() {
+		System.out.println("Test2");
+	}
+	
+}

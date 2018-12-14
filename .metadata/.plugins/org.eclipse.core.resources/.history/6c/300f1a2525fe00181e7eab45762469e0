@@ -1,0 +1,45 @@
+package com.cognizant.elpida.testing;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class shoppingTest {
+	WebDriver driver;
+	String userName = "Elpi";
+	String password = "Pass123";
+	@Before
+	public void setup() {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\Desktop\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		System.out.println("Before");
+	}
+	@After
+	public void teardown() throws InterruptedException {
+		System.out.println("After");
+		
+		driver.quit();
+	}
+	@Test
+	public void searchBlouse() {
+		driver.get("http://automationpractice.com/index.php");
+		WebElement women = driver.findElement(By.xpath("//*[@id=\"block_top_menu\"]/ul/li[1]/a"));
+		women.click();
+		WebElement tops = driver.findElement(By.xpath("//*[@id=\"subcategories\"]/ul/li[1]/div[1]/a/img"));
+		tops.click();
+		WebElement blouses = driver.findElement(By.xpath("//*[@id=\"subcategories\"]/ul/li[2]/div[1]/a/img"));
+		blouses.click();
+		WebElement blouse = driver.findElement(By.xpath("//*[@id=\"center_column\"]/ul/li/div/div[1]/div/a[1]/img"));
+		assertEquals("Search Not Successful: ", true, blouse.isDisplayed());
+		
+		
+		
+	}
+}

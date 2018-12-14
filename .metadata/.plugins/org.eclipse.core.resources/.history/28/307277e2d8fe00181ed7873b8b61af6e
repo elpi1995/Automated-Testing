@@ -1,0 +1,12 @@
+package com.cognizant.elpida.testing.Cucumber;
+
+import org.junit.runner.RunWith;
+
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features = "/Cucumber/src/test/java/com/cognizant/elpida/testing/Cucumber/Parametisation.feature", glue = {"com.qa.cucumber"})
+public class Runner {
+
+}

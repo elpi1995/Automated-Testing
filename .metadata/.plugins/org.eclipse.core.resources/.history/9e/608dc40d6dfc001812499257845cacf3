@@ -1,0 +1,16 @@
+package com.cognizant.testing.BlackJack;
+
+public class BlackJack {
+
+		public static void main(String[] args) {
+			
+
+		}
+		public int Play(int num1, int num2){
+			
+				return 0;
+		}
+	}
+
+
+

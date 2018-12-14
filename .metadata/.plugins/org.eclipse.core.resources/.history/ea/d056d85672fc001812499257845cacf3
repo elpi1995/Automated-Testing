@@ -1,0 +1,27 @@
+package com.cognizant.testing.BlackJack;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
+
+import java.rmi.activation.ActivationException;
+import org.junit.Test;
+
+public class BustTests {
+	BlackJack blackjack = new BlackJack();
+	@Test
+	public void playerAndDealerBust() {
+		assertEquals(0,blackjack.play(22, 22));
+		assertEquals(0,blackjack.play(30, 25));
+		assertEquals(0,blackjack.play(25, 30));
+	}
+	
+	@Test
+	public void playerBust() {
+		assertEquals(0,blackjack.play(30, 20));
+	}
+	@Test
+	public void dealerBust() {
+		assertEquals(0,blackjack.play(20, 30));
+	}
+}

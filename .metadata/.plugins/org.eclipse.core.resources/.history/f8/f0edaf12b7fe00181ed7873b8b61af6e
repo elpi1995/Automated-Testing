@@ -1,0 +1,5 @@
+package com.cognizant.elpida.testing.DDT;
+
+public class DDTReadFromFile {
+
+}

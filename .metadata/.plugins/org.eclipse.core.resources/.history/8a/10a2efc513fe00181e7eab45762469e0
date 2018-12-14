@@ -1,0 +1,52 @@
+package com.cognizant.elpida.testing.IHateU;
+import static org.junit.Assert.assertEquals;
+
+import java.util.concurrent.TimeUnit;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class iHateUTests {
+	WebDriver driver;
+	
+	@Before
+	public void setup() {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\Desktop\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://christophperrins.github.io/TestingSite/");
+		
+	}
+	@After
+	public void teardown() throws InterruptedException {
+		System.out.println("After");
+		
+		driver.quit();
+	}
+	@Test
+	public void threadTest() throws InterruptedException {
+		WebElement iHateU = driver.findElement(By.id("quote"));
+		Thread.sleep(10000);
+		assertEquals(true, iHateU.isDisplayed());
+	}
+	@Test
+	public void implicitTest() throws InterruptedException {
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
+		WebElement iHateU2 = driver.findElement(By.xpath("//*[@id=\"quote\"]/h1"));
+		System.out.println(iHateU2.getText());
+		assertEquals(true, iHateU2.isDisplayed());
+	}
+	@Test
+	public void explicitTest() throws InterruptedException {
+		WebElement iHateU3 = (new WebDriverWait(driver, 0)).until(ExpectedConditions.presenceOfElementLocated(By.id("quote")));
+		assertEquals(true, iHateU3.isDisplayed());
+	}
+}

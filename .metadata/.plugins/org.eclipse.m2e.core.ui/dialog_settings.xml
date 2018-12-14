@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item value="All Catalogs" key="catalog"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\Admin\Desktop\Automated Testing\Cucumber\pom.xml"/>
+			<item value="C:\Users\Admin\Desktop\Automated Testing\POM\src\test\java\com\cognizant\elpida\testing\POM\POMTest.java"/>
+			<item value="C:\Users\Admin\Desktop\Automated Testing\BlackJack"/>
+			<item value="C:\Users\Admin\Desktop\Automated Testing\TheDemoSite\src\test\java\com\cognizant\testing\TheDemoSite\demoTest.java"/>
+			<item value="C:\Users\Admin\Desktop\Automated Testing\IHateU\pom.xml"/>
+			<item value="C:\Users\Admin\Desktop\Automated Testing\POM\src\main\java"/>
+			<item value="C:\Users\Admin\Desktop\Automated Testing\Travels\src\test\java\com\cognizant\elpida\testing\Travels\travelsTest.java"/>
+			<item value="C:\Users\Admin\Desktop\Automated Testing\SchoppingWebsite\src\test\java\com\cognizant\elpida\testing\shoppingTest.java"/>
+			<item value="C:\Users\Admin\Desktop\Automated Testing\Selinium101\src\test\java\com\cognizant\testing\Selinium101\selenium2.java"/>
+			<item value="C:\Users\Admin\Desktop\Automated Testing"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.cognizant.elpida.testing.AutoPokemon"/>
+			<item value="com.cognizant.elpida.testing.JavaScript"/>
+			<item value="com.cognizant.elpida.testing.Tea"/>
+			<item value="com.cognizant.elpida.testing.Cucumber"/>
+			<item value="com.cognizant.elpida.testing.DDT"/>
+			<item value="com.cognizant.elpida.testing.Reports101"/>
+			<item value="com.cognizant.elpida.testing.IHateU"/>
+			<item value="com.cognizant.elpida.testing.POM"/>
+			<item value="com.cognizant.elpida.testing.Travels"/>
+			<item value="com.cognizant.elpida.testing"/>
+		</list>
+		<list key="groupId">
+			<item value="com.cognizant.elpida.testing"/>
+		</list>
+		<list key="artifactId">
+			<item value="AutoPokemon"/>
+			<item value="JavaScript"/>
+			<item value="Tea"/>
+			<item value="Cucumber"/>
+			<item value="DDT"/>
+			<item value="Reports101"/>
+			<item value="IHateU"/>
+			<item value="POM"/>
+			<item value="Travels"/>
+			<item value="SchoppingWebsite"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

@@ -1,0 +1,12 @@
+package com.cognizant.elpida.testing.AutoPokemon;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class enemyClick {
+	@FindBy(id = "enemyInfo")
+	private WebElement enemy;
+	
+	@FindBy(id = "currentRoute")
+	private WebElement route;
+}

@@ -1,0 +1,55 @@
+package com.cognizant.testing.Selinium101;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FirstSelinium {
+	WebDriver driver;
+	
+	@Before
+	public void setup() {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\Desktop\\chromedriver.exe");
+		driver = new ChromeDriver();
+		System.out.println("Before");
+	}
+	@After
+	public void teardown() throws InterruptedException {
+		System.out.println("After");
+		Thread.sleep(5000);
+		driver.quit();
+		
+	}
+//	@Test
+//	public void seleniumTest() {
+//		driver.get("https://www.newyorker.com/");
+//		
+//	}
+//	@Test
+//	public void testery() {
+//		System.out.println("Test2");
+//	}
+	@Test
+	public void gettingElements() throws InterruptedException {
+		driver.manage().window().maximize();
+		driver.get("https://www.bing.com");
+		WebElement textbox = driver.findElement(By.id("sb_form_q"));
+		textbox.sendKeys("kittens");
+		Thread.sleep(1000);
+		textbox.submit();
+		Thread.sleep(1000);
+		textbox.submit();
+		Thread.sleep(1000);
+		textbox.submit();
+		
+		
+	}
+	
+	
+}

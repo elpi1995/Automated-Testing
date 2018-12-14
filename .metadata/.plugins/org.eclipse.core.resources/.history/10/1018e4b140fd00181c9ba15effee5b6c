@@ -1,0 +1,37 @@
+package com.cognizant.elpida.testing;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class shoppingTest {
+	WebDriver driver;
+	String userName = "Elpi";
+	String password = "Pass123";
+	@Before
+	public void setup() {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\Desktop\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		System.out.println("Before");
+	}
+	@After
+	public void teardown() throws InterruptedException {
+		System.out.println("After");
+		Thread.sleep(5000);
+		driver.quit();
+	}
+	@Test
+	public void searchBlouse() {
+		driver.get("http://automationpractice.com/index.php");
+		WebElement women = driver.findElement(By.xpath("//*[@id=\"block_top_menu\"]/ul/li[1]/a"));
+		women.click();
+		
+	}
+}

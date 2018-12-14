@@ -1,0 +1,12 @@
+package com.cognizant.elpida.testing.Reports101;
+
+import org.junit.Before;
+
+public class ReportsTest101 {
+	@Before
+	public void setup() {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\Desktop\\chromedriver.exe");
+	}
+	
+
+}

@@ -1,0 +1,40 @@
+package com.cognizant.testing.BlackJack;
+
+public class BlackJack {
+
+		public static void main(String[] args) {
+			int x, y;
+			x= 0;
+			y = 22;
+			System.out.println(Play(x,y));
+			
+
+		}
+		public static int Play(int num1, int num2){
+			if(num1<=0||num2<=0) {
+				System.out.println("Integers must be larger than zero!"); 
+				return 0;
+			}
+			else if(num1<=21 && num2<=21) {
+				if(num1>num2) {
+					return num1;
+				}
+				else if(num2>num1) {
+					return num2;
+				}
+				else if(num1==21 && num2==21) {
+					return 21;
+				}
+				else {
+					return num1;
+				}
+				
+			}
+			else {
+				return 0;
+			}
+		}
+	}
+
+
+
